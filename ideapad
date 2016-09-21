@@ -1,0 +1,121 @@
+
+## Engine Rules
+
+### Generell boundaries
+
+One instance of the level islands can hold a maximum of 250 players.
+Every town cost a different amount and type of fruits.
+You don't know how much, until you try.
+If you don't have enough, Wunderlich comes.
+In front of each entrance is also a sphinx.
+The first time she always wakes up.
+Other time, she might (when she is interested).
+
+### Town functions
+
+Temple: Central place where the thought is kept
+
+Hacker space: Place to get hints and tools
+
+Exchange: Place to swap fruits (from level 1)
+
+City hall: Who contributed to what? Who owns the city?
+
+Library: Place for further reading, links to the real world (from level 2)
+
+Court house: Special moral cases, for players to decide (entry from level 5))
+
+
+### Temple
+
+A sphinx in front of each temple
+The thought of the temple in the middle. 
+Four objections, one in every corner.
+Four answers hiding doors behind the objections.
+If a player goes into one corner, he reads the objection and the answer, then ~20 other answers appear of which ~5 are right.
+He has to find out all right ones to open the door.
+If he is wrong, he must spend an error stone.
+If he has no error stones he leaves the temple.
+Error stones can be traded at an Exchange, for the current rate.
+If he is right, he can comment on the answer:
+	- I understand it better as the original
+	- I like it more as the original
+	- It hits the point better as the original
+	- It's simpler as the original
+
+
+#### A temple door opens
+
+When a door opens, a player has two options. 
+He can go through and follow the path out of the city. 
+It will lead to another city, to a level haven or to a dead end.
+
+The second option is to write an own variation of an answer, using own words.
+The program will check if it is too similar to an existing one and if not accept it.
+If accepted it will be added to the pool of answers with the status 'candidate'.
+Within the ~20 answers displayed, there are always some candidates.
+If a candidate is chosen more often right than other answers it gets promoted to 'apprentice'.
+If it is flaged by a player as too fuzzy, not matching the meaning of the original or other reasons, the decision is passed to the judges of this player and the author.
+If they don't agree, they pass it on to their judges, and so one.
+Until decided the answer stays in.
+After a period of time the answer that is chosen right most often is promoted to 'original' and replaces the former original which becomes 'candidate' again.
+
+
+#### An answer is promoted to 'original'
+
+After an answer is promoted to original, the player becomes an owner and is listed in the city hall.
+Original answers earn a share of the income of the village.
+
+#### If a player holds all four original answers
+
+If a player holds all four original answers at a time he is promoted to mayor.
+He then receives the same income regardless if some of his answers become candidate again.
+He gets the income for lost original from the island, so other player can have it from the city.
+
+### Navigation
+
+To new places everyone has to walk.
+There he can collect a position stone.
+With this he can jump to this place the next time.
+
+
+## How thoughts, objections and answers should be written
+
+The original thought is written in bear language (Wim), how the bear speaks to 14 years old children
+The objection is written as a quote of a human living at the beginning of the 21st century.
+The orignal answers are written in the language of a 14 years old children.
+Answers can be no more than 400 characters.
+
+
+## How answers are checked
+
+Important words in answers are marked by the author. At least 12 per answer.
+Any other answer must not have more than half of the same important words as any other answer.
+Any answer must not have more than half of the same other words that have 5 letters or more.
+No tricks allowed (can be flagged as trick).
+
+### Flags
+
+- Trick
+- Doesn't match the meaning
+- Too unclear, too general
+
+
+
+
+## Visual Ideas
+
+Temples are square and in the center of the city.
+Temples should look very bright and beautiful, outside and inside, only a touch of warm colors outside, otherwise shades of grey
+Inside blue tones, sometimes greenish, much natural light. No red. The only warm colours inside are flowers.
+
+The thought in the middle is represented by a colorful artwork made of stone, metal or concrete (no wood, no plastic, all colors allowed)
+The thought is always readable from all sides
+
+## Acoustic Ideas
+
+
+## Technical Ideas
+
+All thoughts are stored together with objections and original answers in single asciidoc files.
+If players want to change these they have to issue real pull requests.
